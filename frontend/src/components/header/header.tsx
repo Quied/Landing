@@ -20,8 +20,8 @@ export default function Header() {
         </ul>
 
         <div className={Styles.Header__buttons}>
-          <a href='#'>Sign Up</a>
-          <a href='#'>Sign In</a>
+          <a href='#'>SIGN UP</a>
+          <a href='#'>SIGN IN</a>
         </div>
       </div>
     );

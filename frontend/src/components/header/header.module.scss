@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap');
 
+::selection {
+    color: white;
+    background: rgba(0, 0, 0, 1);
+  }
 
 .Header img {
     width: 20px;
@@ -46,7 +50,7 @@
 
     &__buttons a:hover {
         transition: 1s;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,1);
         border: none;
         color: white;
     }
@@ -54,7 +58,7 @@
     &__buttons a {
         margin-right: 2%;
         border: 1px solid rgba(0,0,0, 0.5);
-        border-radius: 0.5rem;
+        border-radius: 0.2rem;
         padding-top: 5px;
         width: 120px;
         height: 30px;

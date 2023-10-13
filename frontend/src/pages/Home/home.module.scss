@@ -1,0 +1,17 @@
+.Statistic{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    height: 150px;
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    &__component {
+        color: white;
+    }
+}
+
+.Manga {
+    height: 600px;
+}
