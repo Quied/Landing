@@ -1,4 +1,4 @@
-.Statistic{
+.Statistic {
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
     height: 150px;
@@ -12,6 +12,114 @@
     }
 }
 
+.Anime {
+    text-align: center;
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Это центрирует элементы по горизонтали
+        
+
+        h1 {
+            position: absolute;   
+            z-index: 1;
+            font-size: 13px;
+            width: 15%;
+            padding-top: 10%;
+            text-align: center;
+        }
+
+        img {
+            z-index: 2;
+            transition: 1s;
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
 .Manga {
     height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+
+   &__butt:hover {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+   }
+
+   &__butt {
+        transition: 1s;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin-top: 2%;
+        height: 40px;
+        width: 150px;
+   }
+
+    &__Slider {
+        margin-top: 2%;
+    }
+
+    &__item:hover {
+        cursor: pointer;
+        
+        img {
+            transition: 1s;
+            width: 150px;
+            height: 100px;
+            box-shadow: 6px 5px 5px 1px rgba(0, 0, 0, 0.3);
+            background-color: none;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Это центрирует элементы по горизонтали
+        
+
+        h1 {
+            position: absolute;   
+            z-index: 1;
+            font-size: 13px;
+            width: 15%;
+            padding-top: 10%;
+            text-align: center;
+        }
+
+        img {
+            z-index: 2;
+            transition: 1s;
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}
+
+.SliderButton:hover {
+    
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.SliderButton {
+    transition: 1s;
+    height: 120px;
+    width: 40px;
+    border-radius: 0.3rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    
+
 }
