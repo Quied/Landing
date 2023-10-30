@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from './head.module.scss';
 import HeadBackground from '../images/background.png';
-import Header from '../header/header.tsx';
+import Header from '../header/header';
 import Title from './title';
 
 export default function Head() {
