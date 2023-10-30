@@ -8,7 +8,7 @@ export default function Header() {
         <ul>
 
           <li>
-            <a href="#">
+            <a href="/">
               <img src={Logo}></img>
             </a>
           </li>
@@ -17,6 +17,7 @@ export default function Header() {
           <li>Manga</li>
           <li><a href='/Anime'>Anime</a></li>
           <li>Community</li>
+          
         </ul>
 
         <div className={Styles.Header__buttons}>

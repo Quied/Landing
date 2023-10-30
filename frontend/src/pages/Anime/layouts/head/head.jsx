@@ -10,6 +10,8 @@ import video4 from '../../videos/4.mp4';
 import video5 from '../../videos/5.mp4';
 import video6 from '../../videos/6.mp4';
 import video7 from '../../videos/7.mp4';
+import video8 from '../../videos/8.mp4';
+import video9 from '../../videos/9.mp4';
 
 function Player(props){
     const [isMuted, setIsMuted] = useState(true);
@@ -39,9 +41,9 @@ function Player(props){
             playing={true}
             controls={false}
             muted={isMuted}
-            width='200px'
+            width='230px'
             height='500px'
-            style={{borderRadius: '5rem'}}
+            style={{borderRadius: '10rem'}}
           />
         </div>
       </div>
@@ -54,18 +56,19 @@ export default function Head(){
     return(
         <div className={Styles.Head}>
             <div className={Styles.Title}>
-                <h2>hello world</h2>
-                <h1>Welcome to the site where the art of anime 
+                <h2>YoWai Mo</h2>
+                <h1>Welcome </h1>
+                <h3>Welcome to the site where the art of anime 
                     comes to life. We offer a variety of genres 
                     and series from action to drama. Enjoy the 
                     colorful characters and exciting adventures 
-                    that await you on every page.</h1>
+                    that await you on every page.</h3>
             </div>
 
             <div className={Styles.Players}>
                 <Player video={video7}></Player>
-                <Player video={video2}></Player>
-                <Player video={video3}></Player>
+                <Player video={video8}></Player>
+                <Player video={video9}></Player>
                 
             </div>
             
