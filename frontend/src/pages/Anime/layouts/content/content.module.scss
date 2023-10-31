@@ -1,0 +1,76 @@
+.Wrapper {
+    display: flex;
+}
+
+.All {
+    width: 60%;
+    
+}
+
+.Gengres {
+    
+    width: 50%;
+    margin-right: 2%;
+    margin-left: 12%;
+    background-color: rgb(241, 241, 245);
+
+
+    a {
+        transition: 0.5s;
+        text-align: center;
+        background-color: white;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-left: 5px solid rgb(212, 111, 212);
+        padding: 5px 10px 5px 10px;
+        margin-left: 5%;
+        width: 200px; /* Set the width to your desired value */
+        height: 100px; /* Set the height to your desired value */
+        font-size: 17px;
+        font-weight: bold;
+        
+    }
+
+    a:hover {
+        transition: 0.5s;
+        border-left: 5px solid rgb(190, 86, 190);
+    }
+}
+
+
+
+.Slider {
+    margin-top: 1%;
+}
+
+.Item:hover {
+    transition: 0.5s;
+    box-shadow: 0 15px 16px 0 rgba(0,0,0,0.24), 0 27px 60px 0 rgba(0,0,0,0.2);
+}
+
+.Item {
+    margin-left: 10%;
+    transition: 0.5s;
+    margin-right: 18%;
+    margin-bottom: 10%;
+    background-color: none;
+    border: 1px solid black;
+
+    &__details {
+        color: white;
+        width: 200px;
+        height: 300px;
+        
+        font-size: 15px;
+        
+        border-radius: 1rem;
+        
+        background-size: cover; 
+    }
+}
+.Item a {
+    text-decoration: none;
+    color: black;
+}

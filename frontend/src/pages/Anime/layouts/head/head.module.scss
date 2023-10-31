@@ -1,14 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+.Wrapper {
+    background-image: url('./images/sakura.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 .Head {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 5%;
     margin-right: 5%;
+}
 
+.Links {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    a {
+        text-decoration: none;;
+        color: black;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        font-size: 19px;
+        width: 100px; 
+    }
 }
 
 .Title {
     margin-top: 15%;
+    margin-right: 5%;
+
+    h2 {
+        font-family: 'Inconsolata', monospace;
+        opacity: 0.5;
+    }
+
+    h1 {
+        font-size: 55px;
+        
+    }
+
+    h3{
+        font-family: 'Inconsolata', monospace;
+    }
 }
 
 .Player {

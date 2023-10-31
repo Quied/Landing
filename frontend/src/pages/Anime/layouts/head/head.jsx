@@ -3,6 +3,7 @@ import Styles from './head.module.scss';
 import ReactPlayer from 'react-player'
 import Playerr from '../Player/player';
 
+import Sakura from './images/sakura.png';
 import video1 from '../../videos/1.mp4';
 import video2 from '../../videos/2.mp4';
 import video3 from '../../videos/3.mp4';
@@ -17,15 +18,20 @@ function Player(props){
     const [isMuted, setIsMuted] = useState(true);
     const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsMuted(false);
-    setIsHovered(true);
-  };
+    const [Height, setHeight] = useState(400);
+    const [Width, setWidth] = useState(200);
+    
+    const handleMouseEnter = () => {
+      setIsMuted(false);
+      setIsHovered(true);
+      
+      setWidth(210);
+    };
 
-  const handleMouseLeave = () => {
-    setIsMuted(true);
-    setIsHovered(false);
-  };
+    const handleMouseLeave = () => {
+      setIsMuted(true);
+      setIsHovered(false);
+    };
 
     return(
         <div className={Styles.Video}>
@@ -41,8 +47,8 @@ function Player(props){
             playing={true}
             controls={false}
             muted={isMuted}
-            width='230px'
-            height='500px'
+            width={Width}
+            height={Height}
             style={{borderRadius: '10rem'}}
           />
         </div>
@@ -54,24 +60,22 @@ function Player(props){
 
 export default function Head(){
     return(
-        <div className={Styles.Head}>
-            <div className={Styles.Title}>
-                <h2>YoWai Mo</h2>
-                <h1>Welcome </h1>
-                <h3>Welcome to the site where the art of anime 
-                    comes to life. We offer a variety of genres 
-                    and series from action to drama. Enjoy the 
-                    colorful characters and exciting adventures 
-                    that await you on every page.</h3>
-            </div>
+      <div className={Styles.Wrapper}>
+          <div className={Styles.Head}>
+              <div className={Styles.Title}>
+                  <h3>Enjoy your favorite anime with us!</h3>
+                  <h1>Enjoy your favorite anime with us!</h1>
+                  <h2>YoWai Mo</h2>
+              </div>
 
-            <div className={Styles.Players}>
-                <Player video={video7}></Player>
-                <Player video={video8}></Player>
-                <Player video={video9}></Player>
-                
-            </div>
-            
+              <div className={Styles.Players}>
+                  <Player video={video7}></Player>
+                  <Player video={video8}></Player>
+                  <Player video={video9}></Player>
+                  
+              </div>
+              
+          </div>
         </div>
     )
 }

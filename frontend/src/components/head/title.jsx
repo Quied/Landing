@@ -14,7 +14,7 @@ export default function Title() {
                     </div>
                     <div className={Styles.Title__buttons}>
                         <a href="#" className={Styles.Title__buttons__started}>GET STARTED</a>
-                        <a href="#" className={Styles.Title__buttons__premium}>PREMIUM</a>
+                        <a href="#" className={Styles.Title__buttons__premium}>GO TO ANIME</a>
                     </div>
                 </div>
 
