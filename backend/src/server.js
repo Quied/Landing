@@ -5,6 +5,16 @@ const app = express();
 
 const PORT = 3000;
 
+app.use(express.json());
+
+app.post('/signin', (req,res) => {
+
+});
+
+app.posh('/signin', (req,res) => {
+
+});
+
 app.get('/', (req,res) => {
     res.send('Hello World');
 })

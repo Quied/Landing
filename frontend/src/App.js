@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home/home';
 import Anime from './pages/Anime/anime';
+import SignUp from './pages/Register/SignUp/up';
+import SignIn from './pages/Register/SignIn/in';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}> </Route>
         <Route path="Anime" element={<Anime />} />
+        <Route path="SignUp" element={<SignUp />} />
+        <Route path="SignIn" element={<SignIn />} />
       </Routes>
     </BrowserRouter>
   );

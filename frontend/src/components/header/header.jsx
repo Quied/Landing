@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './header.module.scss';
-import Logo from '../images/logo.png';
+import Logo from './images/logo.png';
 
 export default function Header() {
     return (
@@ -13,16 +13,16 @@ export default function Header() {
             </a>
           </li>
 
-          <li>News</li>
-          <li>Manga</li>
+          <li><a href='/News'>News</a></li>
+          <li><a href='/Manga'>Manga</a></li>
           <li><a href='/Anime'>Anime</a></li>
-          <li>Community</li>
+          <li><a href='/Community'>Community</a></li>
           
         </ul>
 
         <div className={Styles.Header__buttons}>
-          <a href='#'>SIGN UP</a>
-          <a href='#'>SIGN IN</a>
+          <a href='/SignUp'>SIGN UP</a>
+          <a href='/SignIn'>SIGN IN</a>
         </div>
       </div>
     );

@@ -18,6 +18,7 @@
 
 .Header ul a {
     text-decoration: none;
+    font-weight: bold;
     color: black;
 }
 
@@ -25,7 +26,6 @@
     align-items: center;
     width: 100%;
     color: black;
-    font-weight: bold;
     list-style: none;
     display: flex;
     text-align: center;
@@ -39,6 +39,7 @@
     z-index: 1;
     display: flex;
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255,255,255,0.9);
     
     &__buttons {
         align-items: center;
@@ -51,9 +52,9 @@
 
     &__buttons a:hover {
         transition: 1s;
-        background-color: rgba(0,0,0,1);
+        background-color: white;
         border: none;
-        color: white;
+        color: black;
     }
 
     &__buttons a {
@@ -65,6 +66,7 @@
         height: 30px;
         text-align: center;
         color: black;   
+        background-color: rgba(255,255,255,0.5);
         text-decoration: none;
         transition: 0.5s;
     }
