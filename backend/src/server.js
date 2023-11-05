@@ -7,17 +7,17 @@ const jwt = require("jsonwebtoken")
 
 // ===== < > ====
 
-const client = new pg.Client({
-    user: 'postgres',
-});
+// const client = new pg.Client({
+//     user: 'postgres',
+// });
 
 
-client.connect((err) => {
-    client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
-      console.log(err ? err.stack : res.rows[0].message) // Hello World!
-      client.end()
-    })
- })
+// client.connect((err) => {
+//     client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
+//       console.log(err ? err.stack : res.rows[0].message) // Hello World!
+//       client.end()
+//     })
+//  })
 
 
 // client.query('SELECT * FROM users', (err, res) => {
@@ -59,41 +59,56 @@ function generateRefreshToken(user) {
 }
 
 app.post('/sign-in', async (req,res) => {
-    
-    const user = users.find( (c) => c.user == req.body.name);
-    if(user == null){ req.status(404).send("User does not exist");}
-    
-    if(await bcrypt.compare(user.password, req.body.password)){
-        const access_token = generateAccessToken ({user: req.body.name});
-        const refresh_token = generateRefreshToken  ({user: req.body.name});
+    console.log('login request');
 
-        res.json ({
-            accessToken: access_token, 
-            refreshToken: refresh_token
-        });
-    }
-    else { res.status(401).send('Password incorrect'); }
+    const name = req.body.name;
+    const password = req.body.password;
+
+    // const user = users.find( (c) => c.user == req.body.name);
+    // if(user == null){ req.status(404).send("User does not exist");}
+    
+    // if(await bcrypt.compare(user.password, req.body.password)){
+    //     const access_token = generateAccessToken ({user: req.body.name});
+    //     const refresh_token = generateRefreshToken  ({user: req.body.name});
+
+    //     res.json ({
+    //         accessToken: access_token, 
+    //         refreshToken: refresh_token
+    //     });
+    // }
+    // else { res.status(401).send('Password incorrect'); }
+
+    res.status(200);
 
 });
 
 app.post('/sign-up', async (req,res) => {
 
-    console.log('new request..\n');
+    console.log('new sign up..\n');
 
     const user = req.body.name;
     const email = req.body.email;
-
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-    users.push ({
-        user: user, 
-        password: hashedPassword,
-        email: email,
+    const client = new pg.Client({
+        user: 'postgres',
     });
 
-    res.status(201).send(users)
-    console.log(users)
-
+    client.connect()
+        .then(() => {
+            return client.query('INSERT INTO users (name, email, password) VALUES($1, $2, $3)', [user, email, hashedPassword]);
+        })
+        .then(result => {
+            console.log('user successful added');
+        })
+        .catch(err => {
+            console.error(err.stack);
+        })
+        .finally(() => {
+            // res.status(201);
+            client.end();
+            res.redirect('/SignIn');
+        });
 });
 
 app.get('/', (req,res) => {

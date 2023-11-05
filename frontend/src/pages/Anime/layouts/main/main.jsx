@@ -7,7 +7,11 @@ import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Styles from './main.module.scss';
 import Native from "../native/native";
-import back from './images/1.jpeg';
+import Image1 from './images/1.jpeg';
+import Image2 from './images/2.jpeg';
+import Image3 from './images/3.jpeg';
+
+
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,14 +32,14 @@ const responsive = {
     }
   };
 
-  function item() {
+  function AnItem(props) {
     return (
         <div className={Styles.Item}>
             <a href="#">
                   <div className={Styles.Item__details}>
                     <h1>8.7</h1>
-                    <img src={back}></img>
-                    <p>Attack on tittans</p>
+                    <img src={props.img} alt="Image Alt Text" />
+                    <p>{props.name}</p>
                   </div>
             </a>
         </div>
@@ -50,14 +54,15 @@ function PopularList(props){
             <div className={Styles.Slider}>    
             </div>
                 <Carousel responsive={responsive}>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
-                  <div>{item()}</div>
+                  <AnItem img={Image1} name={'Attack on tittans'}/>
+                  <AnItem img={Image2} name={'Naruto'}/>
+                  <AnItem img={Image3} name={'Chaisaw man'}/>
+                  <AnItem img={Image1} name={'Attack on tittans'}/>
+                  <AnItem img={Image2} name={'Naruto'}/>
+                  <AnItem img={Image3} name={'Chaisaw man'}/>
+                  <AnItem img={Image1} name={'Attack on tittans'}/>
+                  <AnItem img={Image2} name={'Naruto'}/>
+                  <AnItem img={Image3} name={'Chaisaw man'}/>
                 </Carousel>
         </div>
     )

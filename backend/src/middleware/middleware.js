@@ -1,8 +1,8 @@
-module.exports = fucntion(options) {
-    return function(req,res,next) {
+// module.exports = fucntion(options) {
+//     return function(req,res,next) {
         
-        //.. 
+//         //.. 
         
-        next();
-    }
-}
+//         next();
+//     }
+// }
