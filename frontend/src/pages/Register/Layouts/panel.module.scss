@@ -6,36 +6,36 @@
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 0.3rem;
     width: 500px;
-    height: 300px;
+    height: 400px;
     z-index: 2;
 }
 
-.Buttons {
-    margin-top: 10%;
-    
-    a:hover {
-        transition: 0.5s;
-        background-color: rgb(249, 211, 250);
-    }
+.Submit:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: rgb(249, 211, 250);
+}
 
-    a {
-        background-color: rgba(249, 211, 250, 0.356);
-        transition: 0.5s;
-        text-decoration: none;
-        color: black;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 0.2rem;
-        border: 1px solid rgba(0,0,0,0.4);
-        top: 20%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-left: 10%;
-        margin-right: 10%;
-     }
+.Submit {
+    margin-top: 10%;
+    background-color: rgba(249, 211, 250, 0.356);
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(0,0,0,0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
 }
 
 .Inputs {
@@ -54,4 +54,19 @@
         color: black;
     }
 
+}
+
+.Message {
+    margin-top: 2%;
+    border-radius: 0.5rem;
+    opacity: 1;
+    background-color: rgba(124, 226, 129, 0.5);
+    color: white;
+    font-size: 19px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }

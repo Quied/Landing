@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const pg = require('pg');
+const cors = require('cors'); // Import the cors package
 const jwt = require("jsonwebtoken")
 
 
@@ -10,18 +11,33 @@ const client = new pg.Client({
     user: 'postgres',
 });
 
+
 client.connect((err) => {
     client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
       console.log(err ? err.stack : res.rows[0].message) // Hello World!
       client.end()
     })
  })
+
+
+// client.query('SELECT * FROM users', (err, res) => {
+//   if (err) { console.error('Error executing query:', err);}
+//   else     { console.log('Query result:', res.rows); }
+
+//   // client.end();
+// });
+
+  
+
+ // === < > ===
   
 
 
 const app = express();
 const PORT = 3000;
+
 app.use(express.json());
+app.use(cors());
 
 const salt = 7;
 
@@ -42,10 +58,11 @@ function generateRefreshToken(user) {
     return refreshToken
 }
 
-app.post('/signin', async (req,res) => {
+app.post('/sign-in', async (req,res) => {
     
     const user = users.find( (c) => c.user == req.body.name);
     if(user == null){ req.status(404).send("User does not exist");}
+    
     if(await bcrypt.compare(user.password, req.body.password)){
         const access_token = generateAccessToken ({user: req.body.name});
         const refresh_token = generateRefreshToken  ({user: req.body.name});
@@ -59,11 +76,21 @@ app.post('/signin', async (req,res) => {
 
 });
 
-app.post('/signup', async (req,res) => {
+app.post('/sign-up', async (req,res) => {
 
-    const user = req.body.name
+    console.log('new request..\n');
+
+    const user = req.body.name;
+    const email = req.body.email;
+
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
-    users.push ({user: user, password: hashedPassword});
+
+    users.push ({
+        user: user, 
+        password: hashedPassword,
+        email: email,
+    });
+
     res.status(201).send(users)
     console.log(users)
 

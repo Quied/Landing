@@ -17,6 +17,7 @@ export default function Header() {
           <li><a href='/Manga'>Manga</a></li>
           <li><a href='/Anime'>Anime</a></li>
           <li><a href='/Community'>Community</a></li>
+          <li><button>Theme</button></li>
           
         </ul>
 

@@ -59,6 +59,15 @@ function Player(props){
     )
 }
 
+function Character(props){
+  return(
+    <div className={Styles.Character}>
+      <img src={Gojo}></img>
+      <h2>{props.title}</h2>
+  </div>
+  );
+}
+
 export default function Head(){
     return(
       <div className={Styles.Wrapper}>
@@ -66,9 +75,9 @@ export default function Head(){
               <div className={Styles.Title}>
                   <h3>Enjoy your favorite anime with us!</h3>
                   <h1>Enjoy your favorite anime with us!</h1>
-                  <div className={Styles.Character}>
-                    <img src={Gojo}></img>
-                    <h2>YoWai Mo</h2>
+
+                  <div className={Styles.Characters}>
+                    <Character title='YoWai Mo'/>
                   </div>
               </div>
 

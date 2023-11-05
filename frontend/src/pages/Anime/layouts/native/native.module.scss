@@ -1,0 +1,31 @@
+@import '../../../../components/colors.scss';
+
+.Native {
+    background-color: $native;
+    color: $on-dark-text;
+    border: 1px solid $base-dark;
+    ul {
+        display:inline-flex;
+        list-style: none;
+        display: flex;
+        justify-content:space-around;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        li a:hover {  
+            transition: 0.5s;  
+            color: $base-dark;
+            background-color: $on-dark-text;
+        }
+
+        li a {    
+            font-weight: bold;
+            transition: 0.5s;  
+            text-decoration: none;
+            border: 1px solid $on-dark-text;
+            border-radius: 0.5rem;
+            padding: 10px 70px 10px 70px;
+            color: $on-dark-text;
+        }
+    }
+}

@@ -1,10 +1,13 @@
+@import '../../../../components/colors.scss';
+
 .Wrapper {
     display: flex;
+    background-color: $base-dark;
 }
 
 .All {
     width: 60%;
-    
+    background-color: $base-dark;
 }
 
 .Gengres {
@@ -12,7 +15,7 @@
     width: 50%;
     margin-right: 2%;
     margin-left: 12%;
-    background-color: rgb(241, 241, 245);
+    background-color: $menu;
 
 
     a {
@@ -41,9 +44,7 @@
 
 
 
-.Slider {
-    margin-top: 1%;
-}
+.Slider { }
 
 .Item:hover {
     transition: 0.5s;
@@ -64,9 +65,7 @@
         height: 300px;
         
         font-size: 15px;
-        
         border-radius: 1rem;
-        
         background-size: cover; 
     }
 }

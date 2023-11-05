@@ -6,24 +6,25 @@ import ReactDOM from 'react-dom';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Styles from './main.module.scss';
-
+import Native from "../native/native";
+import back from './images/1.jpeg';
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 8
+      items: 9
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6
+      items: 7
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 5
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1
+      items: 2
     }
   };
 
@@ -32,7 +33,9 @@ const responsive = {
         <div className={Styles.Item}>
             <a href="#">
                   <div className={Styles.Item__details}>
-                    <h3>Jujutsu Kaisen</h3>
+                    <h1>8.7</h1>
+                    <img src={back}></img>
+                    <p>Attack on tittans</p>
                   </div>
             </a>
         </div>
@@ -41,7 +44,7 @@ const responsive = {
 
 function PopularList(props){
     return(
-        <div>
+        <div className={Styles.WrapperTittle}>
             <h1>{props.Title}</h1>
 
             <div className={Styles.Slider}>    
@@ -65,6 +68,7 @@ export default function Main(){
     return(
         <div>
              <PopularList Title={'Now watching'}></PopularList>
+             <Native></Native>
              <PopularList Title={'New releases'}></PopularList>
         </div>
     )
