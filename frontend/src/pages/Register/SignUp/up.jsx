@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../../components/header/header";
 import Styles from './up.module.scss';
-import Background from '../images/back.png';
+import Background from '../images/home.jpg';
 import Panel from "../Layouts/panel";
 
 export default function SignUp(){

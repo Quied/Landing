@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player'
 import Playerr from '../Player/player';
 
 import Sakura from './images/sakura.png';
+import Gojo from './images/gojo.png';
 import video1 from '../../videos/1.mp4';
 import video2 from '../../videos/2.mp4';
 import video3 from '../../videos/3.mp4';
@@ -65,7 +66,10 @@ export default function Head(){
               <div className={Styles.Title}>
                   <h3>Enjoy your favorite anime with us!</h3>
                   <h1>Enjoy your favorite anime with us!</h1>
-                  <h2>YoWai Mo</h2>
+                  <div className={Styles.Character}>
+                    <img src={Gojo}></img>
+                    <h2>YoWai Mo</h2>
+                  </div>
               </div>
 
               <div className={Styles.Players}>
