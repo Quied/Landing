@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 @import '../colors.scss';
 
 
@@ -8,6 +10,13 @@
     background: rgba(0, 0, 0, 1);
   }
 
+.Header ul button:hover {
+    cursor: pointer;
+}
+.Header ul button {
+    background-color: rgba(0, 0, 0, 0.0);
+    border: none;
+}
 .Header img {
     width: 20px;
     height: 20px;
@@ -31,7 +40,7 @@
     display: flex;
     text-align: center;
     justify-content: space-around;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .Header {
@@ -46,29 +55,30 @@
     
     &__buttons {
         align-items: center;
-        padding: 0 10px;
+        padding: 0 20px 0px 10px;
         display: flex;
         justify-content: end;
-        width:30%;
-        text-align: center;
+        text-align: center;;
     }
 
     &__buttons a:hover {
-        transition: 1s;
-        border: none;
+        transition: 0.5s;
+        background-color: rgb(233, 218, 241);
     }
 
     &__buttons a {
         margin-right: 2%;
         border: 1px solid rgba(0,0,0, 0.5);
-        border-radius: 0.2rem;
+        border-radius: 0.8rem;
         padding-top: 5px;
-        width: 120px;
-        height: 30px;
+        padding-bottom: 5px;
+        width: 130px;
         text-align: center;
-        color: white;
-        background-color: rgba(255,255,255,0.5);
+        color: $base-dark;
+        font-weight: bold;
+        background-color: white;
         text-decoration: none;
+        font-family: 'Inter', sans-serif;
         transition: 0.5s;
     }
 
@@ -78,6 +88,6 @@
         height: 30px;
         border-radius: 0.5rem;
         border: none
-
     }
 }
+

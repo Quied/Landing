@@ -2,11 +2,14 @@ import React, {useState} from "react";
 import Header from "../../../components/header/header";
 import Styles from './in.module.scss';
 import axios from 'axios';
+import FormImage from '../images/back.png';
 
 export default function SignIn(){
     const [name, changeName] = useState('');
     const [password, changePassword] = useState('');
     const [message, changeMessage] = useState('message');
+
+    
 
     const user = {
         name: name,
@@ -38,32 +41,38 @@ export default function SignIn(){
     }
 
       return(
-        <div className={Styles.SignIn}>
-            <Header></Header>
-            <div className={Styles.Panel}>
-               
-                <form  onSubmit={Submit}>
-            <div className={Styles.Panel}>
-            <h1>Log In</h1>
+        <div className={Styles.SignIn}>         
+            <div className={Styles.Panel}>    
+                <div>
+                    <form onSubmit={Submit}>
+                        <div className={Styles.Head}>
+                            <a><u>Log in</u></a>
+                            <a>Sign Up</a>
+                            <button>Close</button>
+                        </div>
+                        <div className={Styles.Title}>
+                            <h1>Welcome back!</h1>
+                        </div>
+                            <div className={Styles.Inputs}>
+                                <input 
+                                    type='text'
+                                    placeholder="Name"
+                                    onChange={handleName}
+                                />
+                                <input 
+                                    type='text'
+                                    placeholder="Password"
+                                onChange={handlePassword}
+                                />
+                            </div>  
 
-                <div className={Styles.Inputs}>
-                    <input 
-                        type='text'
-                        placeholder="Name"
-                        onChange={handleName}
-                    />
-                    <input 
-                        type='text'
-                        placeholder="Password"
-                       onChange={handlePassword}
-                    />
-                </div>  
-
-                <button className={Styles.Submit} type="submit">Sign In</button>
+                    <button className={Styles.Submit} type="submit">Sign In</button>
+                    </form>
+                </div>
+                <div className={Styles.Image}>
+                    <img src={FormImage}></img>
+                </div>
             </div>
-            <div className={Styles.Message}>{message}</div>
-        </form>
-            </div>
-    </div>
+        </div>
       )
 }

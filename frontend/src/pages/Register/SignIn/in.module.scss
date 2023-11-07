@@ -1,21 +1,25 @@
+@import '../../../components/colors.scss';
+
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .Panel {
+    display: flex;
     position: absolute;
+    margin-top: 25%;
     top: 50%;
-    left: 30%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(124,110,0,0.5);
+    background-color: $base-dark;
     border-radius: 0.3rem;
-    width: 500px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
     z-index: 2;
     
     h1 {
         align-items: center;
-        color: white;
+        
     }
 }
 
@@ -27,7 +31,7 @@ body {
 
 .Submit {
     margin-top: 10%;
-    background-color: rgba(249, 211, 250, 0.356);
+    background-color: $button;
     transition: 0.5s;
     text-decoration: none;
     color: black;
@@ -51,11 +55,11 @@ body {
     display: grid;
     margin-left: 10%;
     margin-right: 10%;
-    
+    border-left: 11px $button;
     
     input {
         height: 40px;
-        background-color: rgba(0,0,0,0);
+        background-color: $back;
         border: none;
         border-bottom: 1px solid black;
         color: white;
@@ -78,4 +82,34 @@ body {
     text-align: center;
     padding-top: 3%;
     padding-bottom: 3%;
+}
+
+
+.Title {
+    h1 { color: $button; }
+}
+
+.Head a:hover{
+    cursor: pointer;
+}
+.Head {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    u {   }
+}
+
+.Image {
+    width: 100%;
+
+    img {
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.SignIn {
+    
 }

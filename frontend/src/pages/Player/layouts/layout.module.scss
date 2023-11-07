@@ -1,0 +1,37 @@
+@import '../../../components/colors.scss';
+
+.Form {
+    margin-left: 13%;
+    margin-right: 13%;
+}
+
+.Header {
+    margin-top: 10%;
+    height: 30px;
+    background-color: $native;
+    height: 1200px;
+    
+
+    &__component {
+        display: flex;
+
+        img {
+            width: 300px;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    &__description {
+        margin-left: 5%;
+
+        &__item {
+            display: flex;
+            
+            h1 {
+                font-size: 15px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
